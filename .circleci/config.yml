@@ -9,12 +9,3 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello World!"
-  build-linux:
-    docker:
-      - image: cimg/node:17.2.0
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-    steps:
-      - checkout
-      - run: echo "Hello Linux!"

@@ -1,11 +1,26 @@
-version: 2.1
+version: 2
 jobs:
-  build-android:
+  android:
     docker:
-      - image: cimg/android:2021.10.2
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    - image: cimg/android:2021.10.2
+      auth:
+        username: mydockerhub-user
+        password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - run: echo "Hello, Android!"
+  linux:
+    docker:
+      - image: cimg/node:17.2.0
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+    steps: 
+      - checkout
+      - run: echo "Hello from Linux!"
+workflows:
+  version: 2
+  android_and_linux:
+    jobs:
+      - android
+      - linux

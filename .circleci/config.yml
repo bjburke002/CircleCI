@@ -1,4 +1,4 @@
-version 2.1
+version: 2.1
 jobs:
   build-android:
     docker:
@@ -6,7 +6,7 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
-      steps:
+    steps:
         - checkout
         - run: echo "Hello World!"
   build-linux:
@@ -15,6 +15,6 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
-      steps:
+    steps:
         - checkout
         - run: echo "Hello Linux!"

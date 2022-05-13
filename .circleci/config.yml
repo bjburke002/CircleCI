@@ -6,7 +6,7 @@ jobs:
       
         auth:
           username: mydockerhub-user
-           password: $DOCUERHUB_PASSWORD 
+           password: $DOCKERHUB_PASSWORD 
     steps:
       - checkout
       - run: echo "Hello world!"

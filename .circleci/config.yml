@@ -3,7 +3,6 @@ jobs:
   build:
     docker:
       - image: cimg/node:17.2.0 # Primary container, where commands are run
-      
         auth:
           username: mydockerhub-user
            password: $DOCKERHUB_PASSWORD 

@@ -7,8 +7,8 @@ jobs:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
     steps:
-        - checkout
-        - run: echo "Hello World!"
+      - checkout
+      - run: echo "Hello World!"
   build-linux:
     docker:
       - image: cimg/node:17.2.0
@@ -16,5 +16,5 @@ jobs:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
     steps:
-        - checkout
-        - run: echo "Hello Linux!"
+      - checkout
+      - run: echo "Hello Linux!"
